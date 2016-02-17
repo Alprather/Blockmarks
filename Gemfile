@@ -20,7 +20,7 @@ gem 'turbolinks'
 gem 'bootstrap'
 gem 'figaro'
 gem 'pry'
-gem 'bootstrap-sass'
+
 
 group :development, :test do
   gem 'byebug'
@@ -32,3 +32,4 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'devise'
 end
+gem 'bootstrap-sass'
