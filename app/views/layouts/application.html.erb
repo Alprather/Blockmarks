@@ -13,6 +13,7 @@
         <li><%= link_to "Blocmarks", root_path %></li>
         <li><%= link_to "About", welcome_about_path %></li>
       </ul>
+      
       <% if user_signed_in? %>
       Signed in as:
       <strong><%= current_user.email %></strong>
