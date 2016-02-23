@@ -1,4 +1,7 @@
 class BookmarksController < ApplicationController
+  def index
+    @topic = Topic.find(params[:topic_id])
+  end
   def show
     @bookmark = Bookmark.find(params[:id])
   end

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :topics do
-      resources :bookmarks, except: [:index]
+      resources :bookmarks
     end
   devise_for :users
   get 'welcome/index'
