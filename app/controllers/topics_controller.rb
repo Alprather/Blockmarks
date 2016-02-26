@@ -1,6 +1,6 @@
 class TopicsController < ApplicationController
   def index
-    @topics = current_user.topics
+    @topics = Topic.all
   end
 
   def show
@@ -30,6 +30,7 @@ end
 
 def update
     @topic = Topic.find(params[:id])
+    authorize @topic
     @topic.title = params[:topic][:title]
 
     if @topic.save
@@ -44,6 +45,7 @@ def update
 
    def destroy
      @topic = Topic.find(params[:id])
+     authorize @topic
      if @topic.destroy
        flash[:notice] = "\"#{@topic.title}\" was deleted successfully."
        redirect_to topics_path

@@ -5,9 +5,9 @@
     <% @topics.each do |topic| %>
     <div class="media">
       <div class="media-body">
-        <h4 class="media-heading">
+        <h2 class="media-heading">
           <%= link_to topic.title, topic_bookmarks_path(topic) %>
-        </h4>
+        </h2>
         <% topic.bookmarks.each do |bookmark| %>
         <div class="media">
           <div class="media-body">
